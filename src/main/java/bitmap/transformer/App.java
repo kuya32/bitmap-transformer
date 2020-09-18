@@ -9,6 +9,23 @@ public class App {
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        System.out.println(args);
+        String str = args[0];
+        switch(str){
+            case "R":
+                System.out.println("red");
+                break;
+            case "G":
+                System.out.println("green");
+                break;
+            case "B":
+                System.out.println("blue");
+                break;
+            default:
+                System.out.println("Invalid");
+                break;
+        }
+        Upload img = new Upload();
+        img.loadup(img.filePath);
     }
 }
