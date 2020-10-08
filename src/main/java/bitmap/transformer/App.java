@@ -4,28 +4,21 @@
 package bitmap.transformer;
 
 public class App {
-    public String getGreeting() {
-        return "Hello world.";
-    }
-
+    public Bitmap bit = new Bitmap();
     public static void main(String[] args) {
-        System.out.println(args);
-        String str = args[0];
-        switch(str){
-            case "R":
-                System.out.println("red");
-                break;
-            case "G":
-                System.out.println("green");
-                break;
-            case "B":
-                System.out.println("blue");
-                break;
-            default:
-                System.out.println("Invalid");
-                break;
+        String gray = "gray";
+        String glow = "glow";
+        String green = "green";
+
+        if (args[0].equals(gray)) {
+            Bitmap img = new Bitmap();
+            img.grayUp(img.ogFilePath);
+        } else if (args[0].equals(glow)) {
+            Bitmap img = new Bitmap();
+            img.glowUp(img.ogFilePath);
+        } else if (args[0].equals(green)) {
+            Bitmap img = new Bitmap();
+            img.greenUp(img.ogFilePath);
         }
-        Upload img = new Upload();
-        img.loadup(img.filePath);
     }
 }
